@@ -128,6 +128,7 @@ const ParallaxImage = ({ src, alt, className, id }: { src: string, alt: string, 
 
 export default function HomePage() {
   const [tickerIndex, setTickerIndex] = useState(0);
+  const [showAnimation, setShowAnimation] = useState(true);
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -140,6 +141,14 @@ export default function HomePage() {
       setTickerIndex((prev) => (prev + 1) % DISASTER_TICKER_DATA.length);
     }, 5000);
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    // Hide animation after 8 seconds
+    const timer = setTimeout(() => {
+      setShowAnimation(false);
+    }, 8000);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -208,6 +217,133 @@ export default function HomePage() {
       />
 
       <Header />
+
+      {/* Rescue Animation Overlay */}
+      <AnimatePresence>
+        {showAnimation && (
+          <motion.div
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5, delay: 7.5 }}
+            className="fixed inset-0 z-40 pointer-events-none overflow-hidden"
+          >
+            {/* Flood Water - enters from right */}
+            <motion.div
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              transition={{ duration: 2, ease: 'easeInOut' }}
+              className="absolute inset-0 bg-gradient-to-l from-blue-600 via-blue-500 to-transparent opacity-40"
+            />
+
+            {/* Water Wave Effect */}
+            <motion.div
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              transition={{ duration: 2.2, ease: 'easeInOut' }}
+              className="absolute inset-0 bg-gradient-to-l from-blue-400 to-transparent opacity-30"
+              style={{
+                clipPath: 'polygon(0 60%, 100% 50%, 100% 100%, 0 100%)',
+              }}
+            />
+
+            {/* Rescue Vehicle - enters from left bottom */}
+            <motion.div
+              initial={{ x: '-200px', y: '100px' }}
+              animate={{ x: '150px', y: 0 }}
+              transition={{ duration: 2.5, ease: 'easeOut', delay: 0.5 }}
+              className="absolute bottom-32 left-0 w-48 h-32"
+            >
+              {/* Vehicle Body */}
+              <div className="relative w-full h-full">
+                {/* Main Vehicle Box */}
+                <motion.div
+                  className="absolute bottom-0 left-0 w-40 h-20 bg-gradient-to-b from-yellow-400 to-yellow-600 rounded-lg shadow-2xl border-4 border-yellow-700"
+                  style={{
+                    boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+                  }}
+                >
+                  {/* Cabin */}
+                  <div className="absolute top-0 left-2 w-12 h-12 bg-gradient-to-b from-yellow-300 to-yellow-500 rounded-t-lg border-2 border-yellow-700" />
+                  {/* Windows */}
+                  <div className="absolute top-1 left-3 w-4 h-4 bg-blue-300 rounded-sm opacity-70" />
+                  <div className="absolute top-1 left-8 w-4 h-4 bg-blue-300 rounded-sm opacity-70" />
+                </motion.div>
+
+                {/* Wheels */}
+                <motion.div className="absolute bottom-0 left-4 w-6 h-6 bg-gray-800 rounded-full border-2 border-gray-900" />
+                <motion.div className="absolute bottom-0 right-6 w-6 h-6 bg-gray-800 rounded-full border-2 border-gray-900" />
+
+                {/* Rotating Wheels Animation */}
+                <motion.div
+                  className="absolute bottom-0 left-4 w-6 h-6 border-2 border-transparent border-t-yellow-400 border-r-yellow-400 rounded-full"
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 0.5, repeat: Infinity, ease: 'linear' }}
+                />
+                <motion.div
+                  className="absolute bottom-0 right-6 w-6 h-6 border-2 border-transparent border-t-yellow-400 border-r-yellow-400 rounded-full"
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 0.5, repeat: Infinity, ease: 'linear' }}
+                />
+              </div>
+            </motion.div>
+
+            {/* Rescuers descending from vehicle */}
+            {/* Rescuer 1 */}
+            <motion.div
+              initial={{ x: '150px', y: '-50px', opacity: 0 }}
+              animate={{ x: '200px', y: '100px', opacity: 1 }}
+              transition={{ duration: 1.5, ease: 'easeOut', delay: 2.5 }}
+              className="absolute bottom-32 left-0 w-8 h-12"
+            >
+              {/* Head */}
+              <div className="w-3 h-3 bg-orange-300 rounded-full mx-auto mb-1" />
+              {/* Body */}
+              <div className="w-4 h-4 bg-red-600 mx-auto mb-1" />
+              {/* Legs */}
+              <div className="flex gap-1 justify-center">
+                <div className="w-1 h-4 bg-gray-700" />
+                <div className="w-1 h-4 bg-gray-700" />
+              </div>
+            </motion.div>
+
+            {/* Rescuer 2 */}
+            <motion.div
+              initial={{ x: '150px', y: '-50px', opacity: 0 }}
+              animate={{ x: '240px', y: '100px', opacity: 1 }}
+              transition={{ duration: 1.5, ease: 'easeOut', delay: 2.7 }}
+              className="absolute bottom-32 left-0 w-8 h-12"
+            >
+              {/* Head */}
+              <div className="w-3 h-3 bg-orange-300 rounded-full mx-auto mb-1" />
+              {/* Body */}
+              <div className="w-4 h-4 bg-blue-600 mx-auto mb-1" />
+              {/* Legs */}
+              <div className="flex gap-1 justify-center">
+                <div className="w-1 h-4 bg-gray-700" />
+                <div className="w-1 h-4 bg-gray-700" />
+              </div>
+            </motion.div>
+
+            {/* Rescuer 3 */}
+            <motion.div
+              initial={{ x: '150px', y: '-50px', opacity: 0 }}
+              animate={{ x: '280px', y: '100px', opacity: 1 }}
+              transition={{ duration: 1.5, ease: 'easeOut', delay: 2.9 }}
+              className="absolute bottom-32 left-0 w-8 h-12"
+            >
+              {/* Head */}
+              <div className="w-3 h-3 bg-orange-300 rounded-full mx-auto mb-1" />
+              {/* Body */}
+              <div className="w-4 h-4 bg-green-600 mx-auto mb-1" />
+              {/* Legs */}
+              <div className="flex gap-1 justify-center">
+                <div className="w-1 h-4 bg-gray-700" />
+                <div className="w-1 h-4 bg-gray-700" />
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* HERO SECTION */}
       <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
