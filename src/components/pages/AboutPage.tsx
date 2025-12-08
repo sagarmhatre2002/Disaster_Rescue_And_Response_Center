@@ -11,7 +11,7 @@ const LEADERSHIP_DATA = [
     _id: '1',
     name: 'Dr. Sarah Johnson',
     role: 'Executive Director',
-    profilePicture: 'https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png?id=leadership-1',
+    profilePicture: 'https://static.wixstatic.com/media/cd3071_f1ca57df831d4a058257925798cadc1a~mv2.png?originWidth=384&originHeight=384',
     biography: 'With 20+ years of disaster management experience, Dr. Johnson leads our global operations.',
     linkedInUrl: 'https://linkedin.com'
   },
@@ -19,7 +19,7 @@ const LEADERSHIP_DATA = [
     _id: '2',
     name: 'Michael Chen',
     role: 'Operations Director',
-    profilePicture: 'https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png?id=leadership-2',
+    profilePicture: 'https://static.wixstatic.com/media/cd3071_e3f00f22781b4ae1b2b244b2ebefb736~mv2.png?originWidth=384&originHeight=384',
     biography: 'Michael oversees all rescue and response operations across our network.',
     linkedInUrl: 'https://linkedin.com'
   },
@@ -27,7 +27,7 @@ const LEADERSHIP_DATA = [
     _id: '3',
     name: 'Emma Rodriguez',
     role: 'Community Outreach Lead',
-    profilePicture: 'https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png?id=leadership-3',
+    profilePicture: 'https://static.wixstatic.com/media/cd3071_c46d6fdade06408ab74f0a648531f9ad~mv2.png?originWidth=384&originHeight=384',
     biography: 'Emma builds partnerships and strengthens community resilience initiatives.',
     linkedInUrl: 'https://linkedin.com'
   },
@@ -39,7 +39,7 @@ const TIMELINE_DATA = [
     eventTitle: 'DRRC Founded',
     eventDate: new Date('2015-01-15'),
     eventDescription: 'The Disaster Rescue & Response Center was established with a mission to save lives globally.',
-    eventImage: 'https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png?id=timeline-1',
+    eventImage: 'https://static.wixstatic.com/media/cd3071_70d1f646268d46c993b78afc3aee664f~mv2.png?originWidth=384&originHeight=384',
     learnMoreUrl: 'https://example.com'
   },
   {
@@ -47,7 +47,7 @@ const TIMELINE_DATA = [
     eventTitle: 'Global Network Expansion',
     eventDate: new Date('2018-06-20'),
     eventDescription: 'Expanded operations to 50+ countries with trained rescue teams.',
-    eventImage: 'https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png?id=timeline-2',
+    eventImage: 'https://static.wixstatic.com/media/cd3071_534f2c747f3345909e390b5a21e83718~mv2.png?originWidth=384&originHeight=384',
     learnMoreUrl: 'https://example.com'
   },
   {
@@ -55,7 +55,7 @@ const TIMELINE_DATA = [
     eventTitle: 'Advanced Technology Integration',
     eventDate: new Date('2021-03-10'),
     eventDescription: 'Implemented satellite coordination and AI-powered response systems.',
-    eventImage: 'https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png?id=timeline-3',
+    eventImage: 'https://static.wixstatic.com/media/cd3071_ed70b75721324ab4b66e385ac14c4262~mv2.png?originWidth=384&originHeight=384',
     learnMoreUrl: 'https://example.com'
   },
 ];
@@ -65,7 +65,7 @@ const ACHIEVEMENTS_DATA = [
     _id: '1',
     title: 'Lives Saved',
     description: 'Emergency response operations',
-    icon: 'https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png?id=achievement-1',
+    icon: 'https://static.wixstatic.com/media/cd3071_ff294fefdf5248cbb2127e24ce8c8d56~mv2.png?originWidth=320&originHeight=320',
     impactMetric: 50000,
     dateAchieved: new Date('2023-12-31'),
     callToActionUrl: 'https://example.com'
@@ -74,7 +74,7 @@ const ACHIEVEMENTS_DATA = [
     _id: '2',
     title: 'Countries Served',
     description: 'Global disaster response',
-    icon: 'https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png?id=achievement-2',
+    icon: 'https://static.wixstatic.com/media/cd3071_92f172ecbfaa45049ddd5fd53f8e9e29~mv2.png?originWidth=320&originHeight=320',
     impactMetric: 120,
     dateAchieved: new Date('2023-12-31'),
     callToActionUrl: 'https://example.com'
@@ -83,7 +83,7 @@ const ACHIEVEMENTS_DATA = [
     _id: '3',
     title: 'Active Volunteers',
     description: 'Trained rescue professionals',
-    icon: 'https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png?id=achievement-3',
+    icon: 'https://static.wixstatic.com/media/cd3071_d74beed46ff84e3da6784b9aa996364d~mv2.png?originWidth=320&originHeight=320',
     impactMetric: 5000,
     dateAchieved: new Date('2023-12-31'),
     callToActionUrl: 'https://example.com'
