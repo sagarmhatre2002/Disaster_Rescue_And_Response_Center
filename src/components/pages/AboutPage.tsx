@@ -1,49 +1,96 @@
-import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import { BaseCrudService } from '@/integrations';
-import { LeadershipTeam, OrganizationTimeline, Achievements } from '@/entities';
 import { Image } from '@/components/ui/image';
-import { LoadingSpinner } from '@/components/ui/loading-spinner';
 import { Shield, Target, Eye, Award, Linkedin, Calendar, ExternalLink } from 'lucide-react';
 import { format } from 'date-fns';
 
+// Static data for About page
+const LEADERSHIP_DATA = [
+  {
+    _id: '1',
+    name: 'Dr. Sarah Johnson',
+    role: 'Executive Director',
+    profilePicture: 'https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png?id=leadership-1',
+    biography: 'With 20+ years of disaster management experience, Dr. Johnson leads our global operations.',
+    linkedInUrl: 'https://linkedin.com'
+  },
+  {
+    _id: '2',
+    name: 'Michael Chen',
+    role: 'Operations Director',
+    profilePicture: 'https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png?id=leadership-2',
+    biography: 'Michael oversees all rescue and response operations across our network.',
+    linkedInUrl: 'https://linkedin.com'
+  },
+  {
+    _id: '3',
+    name: 'Emma Rodriguez',
+    role: 'Community Outreach Lead',
+    profilePicture: 'https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png?id=leadership-3',
+    biography: 'Emma builds partnerships and strengthens community resilience initiatives.',
+    linkedInUrl: 'https://linkedin.com'
+  },
+];
+
+const TIMELINE_DATA = [
+  {
+    _id: '1',
+    eventTitle: 'DRRC Founded',
+    eventDate: new Date('2015-01-15'),
+    eventDescription: 'The Disaster Rescue & Response Center was established with a mission to save lives globally.',
+    eventImage: 'https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png?id=timeline-1',
+    learnMoreUrl: 'https://example.com'
+  },
+  {
+    _id: '2',
+    eventTitle: 'Global Network Expansion',
+    eventDate: new Date('2018-06-20'),
+    eventDescription: 'Expanded operations to 50+ countries with trained rescue teams.',
+    eventImage: 'https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png?id=timeline-2',
+    learnMoreUrl: 'https://example.com'
+  },
+  {
+    _id: '3',
+    eventTitle: 'Advanced Technology Integration',
+    eventDate: new Date('2021-03-10'),
+    eventDescription: 'Implemented satellite coordination and AI-powered response systems.',
+    eventImage: 'https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png?id=timeline-3',
+    learnMoreUrl: 'https://example.com'
+  },
+];
+
+const ACHIEVEMENTS_DATA = [
+  {
+    _id: '1',
+    title: 'Lives Saved',
+    description: 'Emergency response operations',
+    icon: 'https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png?id=achievement-1',
+    impactMetric: 50000,
+    dateAchieved: new Date('2023-12-31'),
+    callToActionUrl: 'https://example.com'
+  },
+  {
+    _id: '2',
+    title: 'Countries Served',
+    description: 'Global disaster response',
+    icon: 'https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png?id=achievement-2',
+    impactMetric: 120,
+    dateAchieved: new Date('2023-12-31'),
+    callToActionUrl: 'https://example.com'
+  },
+  {
+    _id: '3',
+    title: 'Active Volunteers',
+    description: 'Trained rescue professionals',
+    icon: 'https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png?id=achievement-3',
+    impactMetric: 5000,
+    dateAchieved: new Date('2023-12-31'),
+    callToActionUrl: 'https://example.com'
+  },
+];
+
 export default function AboutPage() {
-  const [leadership, setLeadership] = useState<LeadershipTeam[]>([]);
-  const [timeline, setTimeline] = useState<OrganizationTimeline[]>([]);
-  const [achievements, setAchievements] = useState<Achievements[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const [leadershipData, timelineData, achievementsData] = await Promise.all([
-        BaseCrudService.getAll<LeadershipTeam>('leadershipteam'),
-        BaseCrudService.getAll<OrganizationTimeline>('organizationtimeline'),
-        BaseCrudService.getAll<Achievements>('achievements'),
-      ]);
-      setLeadership(leadershipData.items);
-      setTimeline(timelineData.items.sort((a, b) => 
-        new Date(b.eventDate || 0).getTime() - new Date(a.eventDate || 0).getTime()
-      ));
-      setAchievements(achievementsData.items);
-      setLoading(false);
-    };
-    fetchData();
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-background">
-        <Header />
-        <div className="flex items-center justify-center min-h-[60vh]">
-          <LoadingSpinner />
-        </div>
-        <Footer />
-      </div>
-    );
-  }
-
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -115,7 +162,7 @@ export default function AboutPage() {
               Our Journey
             </h2>
             <div className="space-y-8">
-              {timeline.map((event, index) => (
+              {TIMELINE_DATA.map((event, index) => (
                 <motion.div
                   key={event._id}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -182,7 +229,7 @@ export default function AboutPage() {
               Leadership Team
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {leadership.map((leader, index) => (
+              {LEADERSHIP_DATA.map((leader, index) => (
                 <motion.div
                   key={leader._id}
                   initial={{ opacity: 0, y: 30 }}
@@ -241,7 +288,7 @@ export default function AboutPage() {
               Our Achievements
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {achievements.map((achievement, index) => (
+              {ACHIEVEMENTS_DATA.map((achievement, index) => (
                 <motion.div
                   key={achievement._id}
                   initial={{ opacity: 0, scale: 0.8 }}

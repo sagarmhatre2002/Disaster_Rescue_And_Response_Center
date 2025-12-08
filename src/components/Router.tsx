@@ -1,8 +1,5 @@
-import { MemberProvider } from '@/integrations';
 import { createBrowserRouter, RouterProvider, Navigate, Outlet } from 'react-router-dom';
 import { ScrollToTop } from '@/lib/scroll-to-top';
-import ErrorPage from '@/integrations/errorHandlers/ErrorPage';
-import { MemberProtectedRoute } from '@/components/ui/member-protected-route';
 
 // Pages
 import HomePage from '@/components/pages/HomePage';
@@ -20,7 +17,6 @@ import AwarenessPage from '@/components/pages/AwarenessPage';
 import ArticleDetailPage from '@/components/pages/ArticleDetailPage';
 import GalleryPage from '@/components/pages/GalleryPage';
 import AboutPage from '@/components/pages/AboutPage';
-import DashboardPage from '@/components/pages/DashboardPage';
 
 // Layout component that includes ScrollToTop
 function Layout() {
@@ -36,7 +32,6 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
@@ -99,14 +94,6 @@ const router = createBrowserRouter([
         element: <AboutPage />,
       },
       {
-        path: "dashboard",
-        element: (
-          <MemberProtectedRoute messageToSignIn="Sign in to access your volunteer dashboard">
-            <DashboardPage />
-          </MemberProtectedRoute>
-        ),
-      },
-      {
         path: "*",
         element: <Navigate to="/" replace />,
       },
@@ -117,9 +104,5 @@ const router = createBrowserRouter([
 });
 
 export default function AppRouter() {
-  return (
-    <MemberProvider>
-      <RouterProvider router={router} />
-    </MemberProvider>
-  );
+  return <RouterProvider router={router} />;
 }
