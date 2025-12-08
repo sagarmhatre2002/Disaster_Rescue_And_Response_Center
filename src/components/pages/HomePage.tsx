@@ -218,127 +218,343 @@ export default function HomePage() {
 
       <Header />
 
-      {/* Rescue Animation Overlay */}
+      {/* Full-Screen Immersive Line Animation */}
       <AnimatePresence>
         {showAnimation && (
           <motion.div
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5, delay: 7.5 }}
-            className="fixed inset-0 z-40 pointer-events-none overflow-hidden"
+            className="fixed inset-0 z-40 pointer-events-none overflow-hidden bg-black"
           >
-            {/* Flood Water - enters from right */}
+            {/* Animated Background Grid */}
             <motion.div
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              transition={{ duration: 2, ease: 'easeInOut' }}
-              className="absolute inset-0 bg-gradient-to-l from-blue-600 via-blue-500 to-transparent opacity-40"
-            />
-
-            {/* Water Wave Effect */}
-            <motion.div
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              transition={{ duration: 2.2, ease: 'easeInOut' }}
-              className="absolute inset-0 bg-gradient-to-l from-blue-400 to-transparent opacity-30"
+              className="absolute inset-0 opacity-20"
               style={{
-                clipPath: 'polygon(0 60%, 100% 50%, 100% 100%, 0 100%)',
+                backgroundImage: `linear-gradient(0deg, transparent 24%, rgba(0, 255, 255, 0.1) 25%, rgba(0, 255, 255, 0.1) 26%, transparent 27%, transparent 74%, rgba(0, 255, 255, 0.1) 75%, rgba(0, 255, 255, 0.1) 76%, transparent 77%, transparent),
+                                  linear-gradient(90deg, transparent 24%, rgba(0, 255, 255, 0.1) 25%, rgba(0, 255, 255, 0.1) 26%, transparent 27%, transparent 74%, rgba(0, 255, 255, 0.1) 75%, rgba(0, 255, 255, 0.1) 76%, transparent 77%, transparent)`,
+                backgroundSize: '50px 50px',
               }}
             />
 
-            {/* Rescue Vehicle - enters from left bottom */}
+            {/* Animated Scan Lines */}
             <motion.div
-              initial={{ x: '-200px', y: '100px' }}
-              animate={{ x: '150px', y: 0 }}
-              transition={{ duration: 2.5, ease: 'easeOut', delay: 0.5 }}
-              className="absolute bottom-32 left-0 w-48 h-32"
+              animate={{ y: ['0%', '100%'] }}
+              transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background: 'linear-gradient(180deg, transparent 0%, rgba(0, 255, 255, 0.15) 50%, transparent 100%)',
+                height: '20%',
+              }}
+            />
+
+            {/* Flood Water Line Animation - Dynamic Wave */}
+            <motion.div
+              initial={{ y: '100%' }}
+              animate={{ y: '40%' }}
+              transition={{ duration: 2.5, ease: 'easeInOut' }}
+              className="absolute inset-x-0 h-1/3 pointer-events-none"
             >
-              {/* Vehicle Body */}
-              <div className="relative w-full h-full">
-                {/* Main Vehicle Box */}
-                <motion.div
-                  className="absolute bottom-0 left-0 w-40 h-20 bg-gradient-to-b from-yellow-400 to-yellow-600 rounded-lg shadow-2xl border-4 border-yellow-700"
-                  style={{
-                    boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+              {/* Primary Wave */}
+              <motion.svg
+                className="w-full h-full absolute inset-0"
+                viewBox="0 0 1200 300"
+                preserveAspectRatio="none"
+              >
+                <defs>
+                  <linearGradient id="waveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stopColor="#00FFFF" stopOpacity="0.8" />
+                    <stop offset="50%" stopColor="#0099FF" stopOpacity="0.5" />
+                    <stop offset="100%" stopColor="#0055FF" stopOpacity="0.2" />
+                  </linearGradient>
+                </defs>
+                <motion.path
+                  d="M0,150 Q300,50 600,150 T1200,150 L1200,300 L0,300 Z"
+                  fill="url(#waveGradient)"
+                  animate={{
+                    d: [
+                      'M0,150 Q300,50 600,150 T1200,150 L1200,300 L0,300 Z',
+                      'M0,150 Q300,200 600,150 T1200,150 L1200,300 L0,300 Z',
+                      'M0,150 Q300,50 600,150 T1200,150 L1200,300 L0,300 Z',
+                    ],
                   }}
-                >
-                  {/* Cabin */}
-                  <div className="absolute top-0 left-2 w-12 h-12 bg-gradient-to-b from-yellow-300 to-yellow-500 rounded-t-lg border-2 border-yellow-700" />
-                  {/* Windows */}
-                  <div className="absolute top-1 left-3 w-4 h-4 bg-blue-300 rounded-sm opacity-70" />
-                  <div className="absolute top-1 left-8 w-4 h-4 bg-blue-300 rounded-sm opacity-70" />
-                </motion.div>
+                  transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+                />
+              </motion.svg>
 
+              {/* Particle Effects in Water */}
+              {[...Array(8)].map((_, i) => (
+                <motion.div
+                  key={`particle-${i}`}
+                  className="absolute w-1 h-1 bg-cyan-400 rounded-full"
+                  initial={{ x: Math.random() * 1200, y: Math.random() * 150, opacity: 0 }}
+                  animate={{
+                    x: Math.random() * 1200,
+                    y: Math.random() * 150,
+                    opacity: [0, 1, 0],
+                  }}
+                  transition={{
+                    duration: 2 + Math.random() * 2,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                    delay: i * 0.2,
+                  }}
+                />
+              ))}
+            </motion.div>
+
+            {/* Rescue Vehicle - Line Art Style */}
+            <motion.div
+              initial={{ x: '-400px', y: '50%' }}
+              animate={{ x: '200px', y: '50%' }}
+              transition={{ duration: 2.5, ease: 'easeOut', delay: 0.5 }}
+              className="absolute w-64 h-40 pointer-events-none"
+            >
+              {/* Vehicle SVG Line Art */}
+              <svg viewBox="0 0 200 120" className="w-full h-full" style={{ filter: 'drop-shadow(0 0 20px rgba(0, 255, 255, 0.8))' }}>
+                <defs>
+                  <linearGradient id="vehicleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#FFFF00" />
+                    <stop offset="100%" stopColor="#FF8800" />
+                  </linearGradient>
+                </defs>
+                {/* Vehicle Body */}
+                <motion.rect
+                  x="20"
+                  y="60"
+                  width="160"
+                  height="40"
+                  fill="none"
+                  stroke="url(#vehicleGradient)"
+                  strokeWidth="2"
+                  animate={{
+                    strokeDasharray: [0, 360],
+                    strokeDashoffset: [360, 0],
+                  }}
+                  transition={{ duration: 2, ease: 'easeOut', delay: 0.5 }}
+                />
+                {/* Cabin */}
+                <motion.rect
+                  x="30"
+                  y="40"
+                  width="50"
+                  height="25"
+                  fill="none"
+                  stroke="url(#vehicleGradient)"
+                  strokeWidth="2"
+                  animate={{
+                    strokeDasharray: [0, 150],
+                    strokeDashoffset: [150, 0],
+                  }}
+                  transition={{ duration: 1.5, ease: 'easeOut', delay: 0.8 }}
+                />
+                {/* Windows */}
+                <motion.circle
+                  cx="40"
+                  cy="48"
+                  r="4"
+                  fill="none"
+                  stroke="#00FFFF"
+                  strokeWidth="1.5"
+                  animate={{ opacity: [0, 1, 0] }}
+                  transition={{ duration: 1, repeat: Infinity, delay: 1.5 }}
+                />
+                <motion.circle
+                  cx="55"
+                  cy="48"
+                  r="4"
+                  fill="none"
+                  stroke="#00FFFF"
+                  strokeWidth="1.5"
+                  animate={{ opacity: [0, 1, 0] }}
+                  transition={{ duration: 1, repeat: Infinity, delay: 1.7 }}
+                />
                 {/* Wheels */}
-                <motion.div className="absolute bottom-0 left-4 w-6 h-6 bg-gray-800 rounded-full border-2 border-gray-900" />
-                <motion.div className="absolute bottom-0 right-6 w-6 h-6 bg-gray-800 rounded-full border-2 border-gray-900" />
-
-                {/* Rotating Wheels Animation */}
-                <motion.div
-                  className="absolute bottom-0 left-4 w-6 h-6 border-2 border-transparent border-t-yellow-400 border-r-yellow-400 rounded-full"
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 0.5, repeat: Infinity, ease: 'linear' }}
+                <motion.circle
+                  cx="45"
+                  cy="105"
+                  r="8"
+                  fill="none"
+                  stroke="url(#vehicleGradient)"
+                  strokeWidth="2"
+                  animate={{
+                    strokeDasharray: [0, 50],
+                    strokeDashoffset: [50, 0],
+                  }}
+                  transition={{ duration: 1.5, ease: 'easeOut', delay: 1 }}
                 />
-                <motion.div
-                  className="absolute bottom-0 right-6 w-6 h-6 border-2 border-transparent border-t-yellow-400 border-r-yellow-400 rounded-full"
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 0.5, repeat: Infinity, ease: 'linear' }}
+                <motion.circle
+                  cx="155"
+                  cy="105"
+                  r="8"
+                  fill="none"
+                  stroke="url(#vehicleGradient)"
+                  strokeWidth="2"
+                  animate={{
+                    strokeDasharray: [0, 50],
+                    strokeDashoffset: [50, 0],
+                  }}
+                  transition={{ duration: 1.5, ease: 'easeOut', delay: 1.2 }}
                 />
-              </div>
+                {/* Rotating Wheel Animation */}
+                <motion.circle
+                  cx="45"
+                  cy="105"
+                  r="6"
+                  fill="none"
+                  stroke="#00FFFF"
+                  strokeWidth="1"
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 0.8, repeat: Infinity, ease: 'linear' }}
+                />
+                <motion.circle
+                  cx="155"
+                  cy="105"
+                  r="6"
+                  fill="none"
+                  stroke="#00FFFF"
+                  strokeWidth="1"
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 0.8, repeat: Infinity, ease: 'linear' }}
+                />
+              </svg>
             </motion.div>
 
-            {/* Rescuers descending from vehicle */}
-            {/* Rescuer 1 */}
-            <motion.div
-              initial={{ x: '150px', y: '-50px', opacity: 0 }}
-              animate={{ x: '200px', y: '100px', opacity: 1 }}
-              transition={{ duration: 1.5, ease: 'easeOut', delay: 2.5 }}
-              className="absolute bottom-32 left-0 w-8 h-12"
-            >
-              {/* Head */}
-              <div className="w-3 h-3 bg-orange-300 rounded-full mx-auto mb-1" />
-              {/* Body */}
-              <div className="w-4 h-4 bg-red-600 mx-auto mb-1" />
-              {/* Legs */}
-              <div className="flex gap-1 justify-center">
-                <div className="w-1 h-4 bg-gray-700" />
-                <div className="w-1 h-4 bg-gray-700" />
-              </div>
-            </motion.div>
+            {/* Rescuers - Line Art Style */}
+            {[
+              { delay: 2.5, x: 280, color: '#FF0055' },
+              { delay: 2.7, x: 340, color: '#00FF88' },
+              { delay: 2.9, x: 400, color: '#00CCFF' },
+            ].map((rescuer, idx) => (
+              <motion.div
+                key={`rescuer-${idx}`}
+                initial={{ x: '100px', y: '30%', opacity: 0 }}
+                animate={{ x: `${rescuer.x}px`, y: '50%', opacity: 1 }}
+                transition={{ duration: 1.5, ease: 'easeOut', delay: rescuer.delay }}
+                className="absolute w-12 h-20 pointer-events-none"
+              >
+                <svg viewBox="0 0 40 80" className="w-full h-full" style={{ filter: `drop-shadow(0 0 15px ${rescuer.color})` }}>
+                  {/* Head */}
+                  <motion.circle
+                    cx="20"
+                    cy="10"
+                    r="6"
+                    fill="none"
+                    stroke={rescuer.color}
+                    strokeWidth="1.5"
+                    animate={{
+                      strokeDasharray: [0, 38],
+                      strokeDashoffset: [38, 0],
+                    }}
+                    transition={{ duration: 0.8, ease: 'easeOut', delay: rescuer.delay }}
+                  />
+                  {/* Body */}
+                  <motion.line
+                    x1="20"
+                    y1="16"
+                    x2="20"
+                    y2="40"
+                    stroke={rescuer.color}
+                    strokeWidth="1.5"
+                    animate={{
+                      strokeDasharray: [0, 24],
+                      strokeDashoffset: [24, 0],
+                    }}
+                    transition={{ duration: 0.8, ease: 'easeOut', delay: rescuer.delay + 0.2 }}
+                  />
+                  {/* Left Arm */}
+                  <motion.line
+                    x1="20"
+                    y1="22"
+                    x2="8"
+                    y2="32"
+                    stroke={rescuer.color}
+                    strokeWidth="1.5"
+                    animate={{
+                      strokeDasharray: [0, 17],
+                      strokeDashoffset: [17, 0],
+                    }}
+                    transition={{ duration: 0.8, ease: 'easeOut', delay: rescuer.delay + 0.3 }}
+                  />
+                  {/* Right Arm */}
+                  <motion.line
+                    x1="20"
+                    y1="22"
+                    x2="32"
+                    y2="32"
+                    stroke={rescuer.color}
+                    strokeWidth="1.5"
+                    animate={{
+                      strokeDasharray: [0, 17],
+                      strokeDashoffset: [17, 0],
+                    }}
+                    transition={{ duration: 0.8, ease: 'easeOut', delay: rescuer.delay + 0.3 }}
+                  />
+                  {/* Left Leg */}
+                  <motion.line
+                    x1="20"
+                    y1="40"
+                    x2="12"
+                    y2="70"
+                    stroke={rescuer.color}
+                    strokeWidth="1.5"
+                    animate={{
+                      strokeDasharray: [0, 35],
+                      strokeDashoffset: [35, 0],
+                    }}
+                    transition={{ duration: 0.8, ease: 'easeOut', delay: rescuer.delay + 0.4 }}
+                  />
+                  {/* Right Leg */}
+                  <motion.line
+                    x1="20"
+                    y1="40"
+                    x2="28"
+                    y2="70"
+                    stroke={rescuer.color}
+                    strokeWidth="1.5"
+                    animate={{
+                      strokeDasharray: [0, 35],
+                      strokeDashoffset: [35, 0],
+                    }}
+                    transition={{ duration: 0.8, ease: 'easeOut', delay: rescuer.delay + 0.4 }}
+                  />
+                </svg>
+              </motion.div>
+            ))}
 
-            {/* Rescuer 2 */}
+            {/* Glowing Aura Effects */}
             <motion.div
-              initial={{ x: '150px', y: '-50px', opacity: 0 }}
-              animate={{ x: '240px', y: '100px', opacity: 1 }}
-              transition={{ duration: 1.5, ease: 'easeOut', delay: 2.7 }}
-              className="absolute bottom-32 left-0 w-8 h-12"
-            >
-              {/* Head */}
-              <div className="w-3 h-3 bg-orange-300 rounded-full mx-auto mb-1" />
-              {/* Body */}
-              <div className="w-4 h-4 bg-blue-600 mx-auto mb-1" />
-              {/* Legs */}
-              <div className="flex gap-1 justify-center">
-                <div className="w-1 h-4 bg-gray-700" />
-                <div className="w-1 h-4 bg-gray-700" />
-              </div>
-            </motion.div>
+              className="absolute inset-0 pointer-events-none"
+              animate={{
+                background: [
+                  'radial-gradient(circle at 30% 50%, rgba(0, 255, 255, 0.1) 0%, transparent 50%)',
+                  'radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 0.15) 0%, transparent 50%)',
+                  'radial-gradient(circle at 30% 50%, rgba(0, 255, 255, 0.1) 0%, transparent 50%)',
+                ],
+              }}
+              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+            />
 
-            {/* Rescuer 3 */}
+            {/* Text Overlay - "RESCUE IN PROGRESS" */}
             <motion.div
-              initial={{ x: '150px', y: '-50px', opacity: 0 }}
-              animate={{ x: '280px', y: '100px', opacity: 1 }}
-              transition={{ duration: 1.5, ease: 'easeOut', delay: 2.9 }}
-              className="absolute bottom-32 left-0 w-8 h-12"
+              className="absolute inset-0 flex items-center justify-center pointer-events-none"
+              animate={{ opacity: [0, 0.3, 0] }}
+              transition={{ duration: 8, ease: 'easeInOut' }}
             >
-              {/* Head */}
-              <div className="w-3 h-3 bg-orange-300 rounded-full mx-auto mb-1" />
-              {/* Body */}
-              <div className="w-4 h-4 bg-green-600 mx-auto mb-1" />
-              {/* Legs */}
-              <div className="flex gap-1 justify-center">
-                <div className="w-1 h-4 bg-gray-700" />
-                <div className="w-1 h-4 bg-gray-700" />
+              <div className="text-center">
+                <motion.h2
+                  className="text-6xl font-bold text-cyan-400 font-heading tracking-widest"
+                  animate={{
+                    textShadow: [
+                      '0 0 10px rgba(0, 255, 255, 0.5)',
+                      '0 0 30px rgba(0, 255, 255, 0.8)',
+                      '0 0 10px rgba(0, 255, 255, 0.5)',
+                    ],
+                  }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                >
+                  RESCUE IN PROGRESS
+                </motion.h2>
               </div>
             </motion.div>
           </motion.div>
