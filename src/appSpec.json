@@ -1,0 +1,1116 @@
+{
+  "id": "0354e2c6-8f32-4358-86ba-5b83a34c06d3",
+  "siteName": "DRRC Hub",
+  "domainUrl": "drrchub.com",
+  "brandingPresets": [
+    {
+      "presetId": "00000000-181c-4ba8-bd39-28a681d7b3cf",
+      "brandIdentity": {
+        "designSummary": "**Emergency Response UI: A Fusion of Techy Aesthetics and Critical Information**\n\nVisual Vision: The design aims to create a sense of urgency and reliability through a high-tech interface. It combines a dark, modern aesthetic with clear, easily accessible information. The layout is dynamic and engaging, guiding users through critical resources with intuitive interactions.\n\nExecution Blueprint:\n1. Dark Mode Foundation: The base color scheme is a dark charcoal (#121212) to reduce eye strain and create a sense of seriousness. Accent colors are bright red-orange (#FF4500) for alerts and key interactive elements.\n2. Asymmetrical Grid: A modified 12-column grid provides structure, but elements intentionally break the grid to create visual interest and highlight important information.\n3. Glassmorphism Accents: Subtle glassmorphism effects are used on containers and buttons to add depth and a futuristic feel without sacrificing readability.\n4. Dynamic Data Visualization: Real-time data (disaster tickers, safe zone maps) is presented with smooth animations and clear visual cues to enhance user understanding.\n5. Monospaced Details: Use Azeret Mono for supplementary information like timestamps, coordinates, and data points to reinforce the techy aesthetic.",
+        "toneOfVoice": "Authoritative, urgent, and compassionate.",
+        "tones": [
+          "Informative",
+          "Empathetic",
+          "Action-oriented"
+        ],
+        "designStyle": {
+          "primaryStyle": [
+            "Techy",
+            "Modern",
+            "Minimalist"
+          ],
+          "supportingStyles": [
+            "Futuristic",
+            "Emergency Response"
+          ]
+        },
+        "palette": {
+          "colors": {
+            "primary": "#FF4500",
+            "primaryForeground": "#FFFFFF",
+            "secondary": "#007BFF",
+            "secondaryForeground": "#FFFFFF",
+            "background": "#121212",
+            "foreground": "#FFFFFF",
+            "customColors": [
+              {
+                "name": "alertRed",
+                "value": "#FF0000"
+              },
+              {
+                "name": "safeGreen",
+                "value": "#00FF00"
+              },
+              {
+                "name": "darkGrey",
+                "value": "#333333"
+              },
+              {
+                "name": "destructive",
+                "value": "#DC2626"
+              },
+              {
+                "name": "destructive-foreground",
+                "value": "#FFFFFF"
+              }
+            ]
+          },
+          "paletteUsageGuide": "Use primary color (#FF4500) sparingly for key interactive elements and alerts. Use secondary color (#007BFF) for less critical interactive elements. Dark grey (#333333) can be used for secondary text or backgrounds.",
+          "paletteAccessibilityNotes": "Ensure sufficient contrast between text and background colors (WCAG AA compliance). Use colorblindness simulators to verify accessibility."
+        },
+        "typography": {
+          "headings": {
+            "font": {
+              "role": "Headings",
+              "fontFamily": "space grotesk",
+              "fontJustification": ""
+            },
+            "headingsSimilarFonts": [],
+            "headingsUsageGuide": "Use Space Grotesk for all headings to maintain a modern and techy feel. Adjust font weight and size to create a clear visual hierarchy.",
+            "headingsAccessibilityNotes": "Ensure headings are properly nested (H1, H2, H3, etc.) for semantic structure and screen reader accessibility."
+          },
+          "paragraphs": {
+            "font": {
+              "role": "Paragraphs",
+              "fontFamily": "roboto",
+              "fontJustification": ""
+            },
+            "paragraphsSimilarFonts": [],
+            "paragraphsUsageGuide": "Use Roboto for body text to ensure readability and a clean, modern aesthetic.",
+            "paragraphsAccessibilityNotes": "Ensure sufficient line height and letter spacing for readability. Avoid using very small font sizes."
+          },
+          "welcomeSectionTypography": {
+            "placement": "",
+            "implementation": ""
+          },
+          "fontSizes": [
+            {
+              "name": "xs",
+              "size": "0.75rem",
+              "lineHeight": "1",
+              "letterSpacing": "0.05em",
+              "fontWeight": "400"
+            },
+            {
+              "name": "sm",
+              "size": "0.875rem",
+              "lineHeight": "1.25",
+              "letterSpacing": "0.025em",
+              "fontWeight": "400"
+            },
+            {
+              "name": "base",
+              "size": "1rem",
+              "lineHeight": "1.5",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            },
+            {
+              "name": "lg",
+              "size": "1.125rem",
+              "lineHeight": "1.75",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            },
+            {
+              "name": "xl",
+              "size": "1.25rem",
+              "lineHeight": "1.75",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "500"
+            },
+            {
+              "name": "2xl",
+              "size": "1.5rem",
+              "lineHeight": "2",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "500"
+            },
+            {
+              "name": "3xl",
+              "size": "1.875rem",
+              "lineHeight": "2.25",
+              "letterSpacing": "-0.025em",
+              "fontWeight": "600"
+            },
+            {
+              "name": "4xl",
+              "size": "2.25rem",
+              "lineHeight": "2.5",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "700"
+            },
+            {
+              "name": "5xl",
+              "size": "3rem",
+              "lineHeight": "1",
+              "letterSpacing": "-0.035em",
+              "fontWeight": "700"
+            },
+            {
+              "name": "6xl",
+              "size": "3.75rem",
+              "lineHeight": "1",
+              "letterSpacing": "-0.04em",
+              "fontWeight": "700"
+            },
+            {
+              "name": "7xl",
+              "size": "4.5rem",
+              "lineHeight": "1",
+              "letterSpacing": "-0.045em",
+              "fontWeight": "800"
+            },
+            {
+              "name": "8xl",
+              "size": "6rem",
+              "lineHeight": "1",
+              "letterSpacing": "-0.05em",
+              "fontWeight": "800"
+            },
+            {
+              "name": "9xl",
+              "size": "8rem",
+              "lineHeight": "1",
+              "letterSpacing": "-0.05em",
+              "fontWeight": "900"
+            }
+          ]
+        },
+        "layout": {
+          "layoutDna": {
+            "densitySpectrum": "Moderate",
+            "contrastSpectrum": "High",
+            "gridAlignmentSpectrum": "Intentionally Broken",
+            "negativeSpaceUsage": "Balanced",
+            "textVsImageEmphasis": "Balanced",
+            "complexitySpectrum": "Moderate"
+          },
+          "grid": {
+            "compositionApproach": "Asymmetrical Grid with Glassmorphism Accents",
+            "spacing": {
+              "columns": "12",
+              "rows": "Auto",
+              "gaps": "Base unit: 8px. All grid gaps are multiples of 8px (e.g., 16px, 24px, 32px)."
+            },
+            "margins": "Base unit: 8px. All margins are multiples of 8px.",
+            "padding": "Base unit: 8px. All padding is multiples of 8px."
+          },
+          "heroSectionLayout": "**Emergency Alert Intro**\nComposition (Tailwind Spec): Full-screen container (h-screen grid place-items-center). Headline 'Disaster Rescue & Response Center' with each word wrapped in a `span`. A smaller sub-headline 'We're here to help' is placed below the main headline.\nSignature Hook (Framer Motion Spec): Parent `motion.h1` uses `variants` with `transition: { staggerChildren: 0.06 }`. Each `motion.span` has a variant with `initial={{ opacity: 0, y: -50 }}` and `animate={{ opacity: 1, y: 0 }}`. An emergency alert icon (e.g., a flashing siren) is placed to the left of the headline and uses a `whileHover={{ scale: 1.1 }}` effect."
+        },
+        "components": {
+          "containers": "Method: Glassmorphism, Style: background-color: rgba(255, 255, 255, 0.05), border: 1px solid rgba(255, 255, 255, 0.1), border-radius: 16px, backdrop-filter: blur(10px)",
+          "images": "Layout Role: Full-bleed background with a fixed position to create a window effect on scroll. | Gallery Type: Horizontal Scroll Filmstrip: A single-row gallery driven by horizontal scroll, where oversized items create a 'peek-a-boo' effect.",
+          "buttons": "Primary: background-color: #FF4500, color: #FFFFFF, border-radius: 8px, padding: 12px 24px. Secondary: background-color: transparent, color: #FF4500, border: 1px solid #FF4500, border-radius: 8px."
+        },
+        "graphicElements": {
+          "icons": "",
+          "illustrations": "",
+          "stickers": ""
+        }
+      },
+      "originImagesUrls": []
+    },
+    {
+      "presetId": "0dcb068f-c67e-4584-9159-c11e15718388",
+      "brandIdentity": {
+        "designSummary": "This design features a modern, high-contrast aesthetic with a minimalistic yet bold approach. The primary color palette revolves around a vivid orange accent paired with deep charcoal black and clean white backgrounds, creating a dynamic and professional atmosphere. Typography is geometric and sans-serif, emphasizing clarity and technical sophistication. The layout is grid-based and modular, with generous spacing and clear hierarchical numbering to guide users through content logically. UI components such as buttons and cards are minimalistic with subtle shadows and rounded corners, reinforcing a sleek and contemporary feel. The overall visual personality is that of a cutting-edge technology brand, conveying trustworthiness, innovation, and expertise.",
+        "toneOfVoice": "Authoritative, innovative, and professional with a focus on precision and clarity.",
+        "tones": [
+          "Professional",
+          "Innovative",
+          "Bold",
+          "Technical",
+          "Clean",
+          "Authoritative",
+          "Dynamic",
+          "Precise",
+          "Modern",
+          "Minimalistic"
+        ],
+        "designStyle": {
+          "primaryStyle": [
+            "Modern",
+            "Minimalism",
+            "Tech-Industrial"
+          ],
+          "supportingStyles": [
+            "Modular",
+            "High-Contrast",
+            "Corporate"
+          ]
+        },
+        "palette": {
+          "colors": {
+            "primary": "#D23F0F",
+            "primaryForeground": "#FFFFFF",
+            "secondary": "#121212",
+            "secondaryForeground": "#FFFFFF",
+            "background": "#FAFAFA",
+            "customColors": [
+              {
+                "name": "foreground",
+                "value": "#111111"
+              },
+              {
+                "name": "destructive",
+                "value": "#DF3131"
+              },
+              {
+                "name": "destructiveforeground",
+                "value": "#FFFFFF"
+              },
+              {
+                "name": "surfacedark",
+                "value": "#1C1C1C"
+              },
+              {
+                "name": "divider",
+                "value": "#E0E0E0"
+              }
+            ]
+          },
+          "paletteUsageGuide": "The color system is defined by a stark contrast between the 'background' and the 'secondary' color. Use the 'secondary' color to create immersive, full-width sections that house technical capabilities or feature lists, using 'secondaryForeground' for all typography within these zones. The 'background' color serves as the canvas for standard content, research data, and card-based layouts, paired with the 'foreground' color for text. The 'primary' color is the brand's 'safety signal'; use it exclusively for high-impact visual anchors such as numbered badges, active navigation states, or primary call-to-action buttons. Do not overuse the 'primary' color for large backgrounds. Use 'surfaceDark' for container elements that sit on top of the 'secondary' background to create subtle depth. The 'divider' color should be used for the thin, precise horizontal lines that structure the content.",
+          "paletteAccessibilityNotes": "The combination of 'background' and 'foreground' provides excellent contrast (AAA). Similarly, 'secondary' and 'secondaryForeground' offer high contrast suitable for all text sizes. The 'primary' color with 'primaryForeground' generally meets minimum contrast requirements for large text or graphical UI components (like the numbered badges shown) but may fall short of WCAG AA for small body text; therefore, avoid using 'primary' as a background for fine print. Ensure that any text placed on 'surfaceDark' maintains sufficient lightness to stand out."
+        },
+        "typography": {
+          "headings": {
+            "font": {
+              "role": "Primary Heading Font",
+              "fontFamily": "Sora",
+              "fontJustification": ""
+            },
+            "headingsSimilarFonts": [
+              "work-sans-v2",
+              "poppins-v2",
+              "raleway"
+            ],
+            "headingsUsageGuide": "Use the heading font for all major titles and section headers to establish hierarchy and clarity. Headings should be bold and sized prominently to contrast with body text. Pair headings with the paragraph font to maintain a cohesive and professional look. Adequate spacing above and below headings ensures readability and visual separation. Use the 'primary' color for numbering and accent elements near headings to reinforce brand identity.",
+            "headingsAccessibilityNotes": "Headings use high contrast colors such as 'secondaryForeground' on 'secondary' backgrounds or black on 'background' to meet WCAG AA standards for large text, ensuring clear readability."
+          },
+          "paragraphs": {
+            "font": {
+              "role": "Main Body Text Font",
+              "fontFamily": "Sora",
+              "fontJustification": ""
+            },
+            "paragraphsSimilarFonts": [
+              "work-sans-v2",
+              "open sans",
+              "poppins-v2"
+            ],
+            "paragraphsUsageGuide": "Use the paragraph font for all body text, descriptions, and smaller informational content. Maintain sufficient line height and letter spacing for comfortable reading. Paragraph text should contrast strongly with the background, using 'secondaryForeground' on dark backgrounds and black or dark gray on light backgrounds. Avoid using the 'primary' color for large blocks of text to preserve readability and focus the accent color on interactive or key elements.",
+            "paragraphsAccessibilityNotes": "Paragraph text colors maintain WCAG AA contrast ratios against their backgrounds, ensuring accessibility for all users."
+          },
+          "welcomeSectionTypography": {
+            "placement": "Top-Third Anchor",
+            "implementation": "The welcome section uses a large, bold heading anchored in the top third of the viewport, overlaying a full-width hero image. The heading is left-aligned with ample padding, creating a strong focal point. Supporting text is placed nearby with smaller font size and lighter weight, maintaining hierarchy. The placement balances visual impact with readability, leveraging negative space around the text to avoid clutter and emphasize the brand message."
+          },
+          "fontSizes": [
+            {
+              "name": "xs",
+              "size": "0.75rem",
+              "lineHeight": "1.2",
+              "letterSpacing": "0.02em",
+              "fontWeight": "400"
+            },
+            {
+              "name": "sm",
+              "size": "0.875rem",
+              "lineHeight": "1.3",
+              "letterSpacing": "0.02em",
+              "fontWeight": "400"
+            },
+            {
+              "name": "base",
+              "size": "1rem",
+              "lineHeight": "1.5",
+              "letterSpacing": "0.025em",
+              "fontWeight": "400"
+            },
+            {
+              "name": "lg",
+              "size": "1.125rem",
+              "lineHeight": "1.5",
+              "letterSpacing": "0.025em",
+              "fontWeight": "500"
+            },
+            {
+              "name": "xl",
+              "size": "1.25rem",
+              "lineHeight": "1.5",
+              "letterSpacing": "0.03em",
+              "fontWeight": "600"
+            },
+            {
+              "name": "2xl",
+              "size": "1.5rem",
+              "lineHeight": "1.4",
+              "letterSpacing": "0.03em",
+              "fontWeight": "600"
+            },
+            {
+              "name": "3xl",
+              "size": "1.875rem",
+              "lineHeight": "1.3",
+              "letterSpacing": "0.035em",
+              "fontWeight": "700"
+            },
+            {
+              "name": "4xl",
+              "size": "2.25rem",
+              "lineHeight": "1.2",
+              "letterSpacing": "0.04em",
+              "fontWeight": "700"
+            },
+            {
+              "name": "5xl",
+              "size": "3rem",
+              "lineHeight": "1.1",
+              "letterSpacing": "0.045em",
+              "fontWeight": "800"
+            },
+            {
+              "name": "6xl",
+              "size": "3.75rem",
+              "lineHeight": "1.1",
+              "letterSpacing": "0.05em",
+              "fontWeight": "800"
+            },
+            {
+              "name": "7xl",
+              "size": "4.5rem",
+              "lineHeight": "1",
+              "letterSpacing": "0.05em",
+              "fontWeight": "900"
+            },
+            {
+              "name": "8xl",
+              "size": "6rem",
+              "lineHeight": "1",
+              "letterSpacing": "0.06em",
+              "fontWeight": "900"
+            },
+            {
+              "name": "9xl",
+              "size": "8rem",
+              "lineHeight": "1",
+              "letterSpacing": "0.07em",
+              "fontWeight": "900"
+            }
+          ]
+        },
+        "layout": {
+          "layoutDna": {
+            "densitySpectrum": "Balanced",
+            "contrastSpectrum": "High-Contrast",
+            "gridAlignmentSpectrum": "Strict Grid",
+            "negativeSpaceUsage": "Generous",
+            "textVsImageEmphasis": "Balanced",
+            "complexitySpectrum": "Simple & Clean"
+          },
+          "grid": {
+            "compositionApproach": "Modular",
+            "spacing": {
+              "columns": "12-column grid",
+              "rows": "Defined content rows",
+              "gaps": "Consistent medium gaps"
+            },
+            "margins": "Generous page margins",
+            "padding": "Consistent padding within containers"
+          }
+        },
+        "components": {
+          "containers": "Containers use solid backgrounds of either 'background' or 'secondary' colors with subtle shadows and rounded corners to create separation and depth. Content is well padded and spaced to maintain clarity and hierarchy. Number badges in 'primary' color are used to label sections and items, adding visual interest and aiding navigation.",
+          "images": "Images are used prominently in hero sections with full-width layouts and overlay text. They are industrial and technical in tone but do not influence the core color palette. Images have no borders and are integrated seamlessly into the layout.",
+          "buttons": "Buttons are minimalistic with a solid 'primary' background and 'primaryForeground' text for primary actions. Secondary buttons use transparent backgrounds with 'primary' colored borders and text. Buttons have subtle rounded corners and consistent padding, maintaining a clean and modern look."
+        },
+        "graphicElements": {
+          "icons": "Icons are simple, line-based, and use the 'primary' color for emphasis. They maintain a consistent stroke weight and style, supporting the technical and modern aesthetic.",
+          "illustrations": "No illustrations are present; the design relies on photography and clean UI elements.",
+          "stickers": "Number badges and small labels use the 'primary' color with white text, featuring rounded corners and consistent sizing to create a cohesive visual language."
+        }
+      },
+      "originImagesUrls": [
+        "https://wixmp-fe53c9ff592a4da924211f23.wixmp.com/uploads/1752412000140-Screenshot%202025-06-04%20at%2011.01.34.jpg"
+      ]
+    },
+    {
+      "presetId": "fa7f3807-7f5a-4312-9372-d6d46e79a440",
+      "brandIdentity": {
+        "designSummary": "The design features a sleek, dark-themed aesthetic dominated by deep blues and blacks that evoke a sense of security and sophistication. Bright blue accent colors highlight key interactive elements such as buttons and navigation links, no other colors for buttons, providing clear visual cues for user actions. Typography is modern and geometric, using a bold sans-serif font for headings and a lighter sans-serif for body text, ensuring readability and a contemporary feel. The layout is spacious and modular, with generous padding and margins that create a clean, uncluttered interface. UI components like buttons and icons are minimalistic with rounded corners and consistent styling, reinforcing the modern and professional tone. Imagery includes 3D rendered graphics and product mockups that emphasize innovation and technology. Overall, the design balances a futuristic tech vibe with user-friendly clarity, making it suitable for fintech and crypto platforms.",
+        "toneOfVoice": "Professional, trustworthy, modern, and approachable with a focus on security and innovation.",
+        "tones": [
+          "secure",
+          "trustworthy",
+          "modern",
+          "innovative",
+          "professional",
+          "clean",
+          "futuristic",
+          "approachable",
+          "minimalistic",
+          "calm"
+        ],
+        "designStyle": {
+          "primaryStyle": [
+            "Modern",
+            "Minimalism",
+            "Tech-Focused"
+          ],
+          "supportingStyles": [
+            "Futuristic",
+            "Geometric",
+            "3D Illustration"
+          ]
+        },
+        "palette": {
+          "colors": {
+            "primary": "#3567fd",
+            "primaryForeground": "#FFFFFF",
+            "secondary": "#1E293B",
+            "secondaryForeground": "#E0E7FF",
+            "background": "#0F172A",
+            "customColors": [
+              {
+                "name": "contentblockbackground",
+                "value": "#CBD5E1"
+              },
+              {
+                "name": "buttonoutline",
+                "value": "#3567fd"
+              },
+              {
+                "name": "iconcolor",
+                "value": "#94A3B8"
+              },
+              {
+                "name": "foreground",
+                "value": "#f0f3ff"
+              },
+              {
+                "name": "destructive",
+                "value": "#DF3131"
+              },
+              {
+                "name": "destructiveforeground",
+                "value": "#ffffff"
+              }
+            ]
+          },
+          "paletteUsageGuide": "Use the 'background' color as the primary canvas for the website, providing a dark and secure atmosphere. The 'primary' color should be reserved for key interactive elements such as primary buttons, call-to-action highlights, and active navigation links, paired with 'primaryForeground' for text to ensure high contrast. The 'secondary' color serves as a background for content blocks or secondary UI areas, with 'secondaryForeground' used for text and icons in these areas to maintain readability. The 'contentBlockBackground' custom color is ideal for subtle section backgrounds that need to stand out gently against the main background without overwhelming the design. Use 'buttonOutline' for secondary or outlined buttons to maintain brand consistency. The 'iconColor' is suited for icons and minor graphic elements, providing a muted contrast that complements the overall palette. This palette ensures accessibility and visual hierarchy while maintaining a modern, tech-savvy aesthetic.",
+          "paletteAccessibilityNotes": "The combination of 'primaryForeground' on 'primary' and 'secondaryForeground' on 'secondary' meets WCAG AA standards for text contrast, ensuring readability for users with visual impairments. The 'background' and 'primaryForeground' pairing also provides sufficient contrast for large text and UI elements. The 'contentBlockBackground' against 'background' offers a gentle contrast suitable for non-textual UI elements and backgrounds. Overall, the palette supports accessibility best practices for both normal and large text sizes."
+        },
+        "typography": {
+          "headings": {
+            "font": {
+              "role": "Primary Heading Font",
+              "fontFamily": "syne",
+              "fontJustification": ""
+            },
+            "headingsSimilarFonts": [
+              "rubik-v2",
+              "work-sans-v2",
+              "open sans"
+            ],
+            "headingsUsageGuide": "Use the heading font for all major titles and section headers to establish hierarchy and clarity. Pair with the paragraph font to create a balanced typographic system. Maintain sufficient spacing above and below headings to enhance readability and visual separation. Headings should be bold and sized larger than body text to draw attention, using the 'primary' color or white on dark backgrounds for maximum contrast.",
+            "headingsAccessibilityNotes": "Headings in 'primaryForeground' on 'background' or 'primary' on 'primaryForeground' meet WCAG AA contrast requirements, ensuring legibility for all users."
+          },
+          "paragraphs": {
+            "font": {
+              "role": "Main Body Text Font",
+              "fontFamily": "barlow-extralight",
+              "fontJustification": ""
+            },
+            "paragraphsSimilarFonts": [
+              "nunito sans",
+              "raleway",
+              "work-sans-v2"
+            ],
+            "paragraphsUsageGuide": "Use the paragraph font for all body copy, descriptions, and secondary text. Maintain comfortable line spacing and letter spacing to enhance readability on screen. Paragraph text should generally be in 'primaryForeground' or 'secondaryForeground' depending on background color to ensure sufficient contrast. Avoid using paragraph fonts in overly small sizes to maintain accessibility.",
+            "paragraphsAccessibilityNotes": "Paragraph text colors against their backgrounds meet WCAG AA standards for normal and large text, supporting accessibility compliance."
+          },
+          "welcomeSectionTypography": {
+            "placement": "Centered",
+            "implementation": "The welcome section uses a large, bold heading centered horizontally and vertically over a dark gradient background with subtle 3D imagery. This placement draws immediate attention to the core message. The heading is paired with a smaller call-to-action button below, also centered, creating a balanced vertical flow. The typography contrasts sharply with the dark background using the 'primaryForeground' color, ensuring readability and focus. This centered approach emphasizes clarity and user engagement right at entry."
+          },
+          "fontSizes": [
+            {
+              "name": "xs",
+              "size": "0.75rem",
+              "lineHeight": "1.25",
+              "letterSpacing": "0.02em",
+              "fontWeight": "400"
+            },
+            {
+              "name": "sm",
+              "size": "0.875rem",
+              "lineHeight": "1.35",
+              "letterSpacing": "0.02em",
+              "fontWeight": "400"
+            },
+            {
+              "name": "base",
+              "size": "1rem",
+              "lineHeight": "1.5",
+              "letterSpacing": "0.025em",
+              "fontWeight": "400"
+            },
+            {
+              "name": "lg",
+              "size": "1.125rem",
+              "lineHeight": "1.5",
+              "letterSpacing": "0.025em",
+              "fontWeight": "500"
+            },
+            {
+              "name": "xl",
+              "size": "1.25rem",
+              "lineHeight": "1.5",
+              "letterSpacing": "0.03em",
+              "fontWeight": "600"
+            },
+            {
+              "name": "2xl",
+              "size": "1.5rem",
+              "lineHeight": "1.4",
+              "letterSpacing": "0.03em",
+              "fontWeight": "600"
+            },
+            {
+              "name": "3xl",
+              "size": "1.875rem",
+              "lineHeight": "1.3",
+              "letterSpacing": "0.03em",
+              "fontWeight": "700"
+            },
+            {
+              "name": "4xl",
+              "size": "2.25rem",
+              "lineHeight": "1.2",
+              "letterSpacing": "0.035em",
+              "fontWeight": "700"
+            },
+            {
+              "name": "5xl",
+              "size": "3rem",
+              "lineHeight": "1.1",
+              "letterSpacing": "0.04em",
+              "fontWeight": "800"
+            },
+            {
+              "name": "6xl",
+              "size": "3.75rem",
+              "lineHeight": "1.1",
+              "letterSpacing": "0.04em",
+              "fontWeight": "800"
+            },
+            {
+              "name": "7xl",
+              "size": "4.5rem",
+              "lineHeight": "1",
+              "letterSpacing": "0.045em",
+              "fontWeight": "900"
+            },
+            {
+              "name": "8xl",
+              "size": "6rem",
+              "lineHeight": "1",
+              "letterSpacing": "0.05em",
+              "fontWeight": "900"
+            },
+            {
+              "name": "9xl",
+              "size": "8rem",
+              "lineHeight": "1",
+              "letterSpacing": "0.05em",
+              "fontWeight": "900"
+            }
+          ]
+        },
+        "layout": {
+          "layoutDna": {
+            "densitySpectrum": "Balanced",
+            "contrastSpectrum": "High-Contrast",
+            "gridAlignmentSpectrum": "Strict Grid",
+            "negativeSpaceUsage": "Generous",
+            "textVsImageEmphasis": "Balanced",
+            "complexitySpectrum": "Simple & Clean"
+          },
+          "grid": {
+            "compositionApproach": "Column-based",
+            "spacing": {
+              "columns": "12-column grid",
+              "rows": "Defined content rows",
+              "gaps": "Consistent medium gaps"
+            },
+            "margins": "Generous page margins",
+            "padding": "Consistent padding within containers"
+          }
+        },
+        "components": {
+          "containers": "Containers have rounded corners with subtle background color shifts using 'secondary' or 'contentBlockBackground' to differentiate sections. Padding is consistent to maintain content clarity and separation. Borders are minimal or absent, relying on color contrast for definition.",
+          "images": "Images and product mockups are prominently displayed with generous spacing. They often have subtle shadows or glow effects to enhance depth against the dark background. Rounded corners are used to maintain visual softness consistent with container styling.",
+          "buttons": "Primary buttons use a solid 'primary' fill with 'primaryForeground' text, featuring rounded corners and a slight shadow for prominence. Secondary buttons are outlined with 'buttonOutline' color and transparent backgrounds, maintaining brand consistency. Buttons have clear hover states with slight color or brightness changes."
+        },
+        "graphicElements": {
+          "icons": "If there are icons then they are minimalistic, line-based, and use the 'iconColor' for subtlety. They complement text without overpowering the layout and maintain consistent stroke widths and rounded corners - no emojis.",
+          "illustrations": "Only 3D rendered illustrations and product mockups are used to convey technology and innovation. They have smooth gradients and soft shadows, integrating seamlessly with the dark background and overall design - no emojis.",
+          "stickers": "No explicit stickers or badges are present; if used, they would likely follow the minimalistic style with solid fills in 'primary' or 'secondary' colors and simple typography - no emojis."
+        }
+      },
+      "originImagesUrls": [
+        "https://wixmp-fe53c9ff592a4da924211f23.wixmp.com/uploads/1750170621412-Screenshot%202025-05-15%20at%2013.57.44%201.png"
+      ]
+    },
+    {
+      "presetId": "65754585-e9c5-4442-a4a7-69fe75686f20",
+      "brandIdentity": {
+        "designSummary": "This brand design embodies a modern, minimalist, and technology-driven aesthetic. It employs a stark color palette dominated by black and white backgrounds, contrasted sharply with a vivid orange accent color used for interactive elements such as links, buttons, and highlights. The typography is monospace, evoking a technical and precise tone, with consistent left alignment and generous spacing to enhance readability. The layout is grid-based and modular, featuring spacious margins and padding that create a clean and uncluttered user experience. Graphic elements include wireframe 3D geometric shapes rendered in white on black backgrounds, reinforcing a futuristic and innovative brand personality. Calls to action are styled with code-like syntax using curly braces and arrows, further emphasizing the brand's tech-savvy identity. Overall, the design communicates professionalism, innovation, and expertise in IT and technology sectors, making it versatile for various modern business applications.",
+        "toneOfVoice": "Professional, innovative, precise, and tech-savvy with a clear and confident communication style.",
+        "tones": [
+          "Minimal",
+          "Futuristic",
+          "Technical",
+          "Clean",
+          "Innovative",
+          "Professional",
+          "Bold",
+          "Structured",
+          "Sophisticated",
+          "Focused"
+        ],
+        "designStyle": {
+          "primaryStyle": [
+            "Minimalism",
+            "Techno-Futuristic",
+            "Monospace Typography"
+          ],
+          "supportingStyles": [
+            "Grid-Based Layout",
+            "Wireframe Graphics",
+            "Modular Design"
+          ]
+        },
+        "palette": {
+          "colors": {
+            "primary": "#D8400E",
+            "primaryForeground": "#FFFFFF",
+            "secondary": "#000000",
+            "secondaryForeground": "#FFFFFF",
+            "background": "#FFFFFF",
+            "customColors": [
+              {
+                "name": "darkbackground",
+                "value": "#000000"
+              },
+              {
+                "name": "textprimary",
+                "value": "#000000"
+              },
+              {
+                "name": "textsecondary",
+                "value": "#D8400E"
+              },
+              {
+                "name": "forgrounde",
+                "value": "#000000"
+              },
+              {
+                "name": "destructive",
+                "value": "#DF3131"
+              },
+              {
+                "name": "destructiveforeground",
+                "value": "#FFFFFF"
+              }
+            ]
+          },
+          "paletteUsageGuide": "Use the 'primary' color for all interactive elements such as buttons, links, and highlights to draw user attention and reinforce brand identity. The 'primaryForeground' color should be used for text or icons placed on 'primary' backgrounds to ensure readability. The 'secondary' color serves as the main background for dark-themed sections, with 'secondaryForeground' used for text and icons on these dark backgrounds. The 'background' color is the default page background for light-themed sections, with 'textPrimary' used for body text and headings on this background. The 'darkBackground' and 'textSecondary' colors are used for high-contrast dark mode or section backgrounds and their corresponding text. This palette ensures strong contrast and accessibility while maintaining a clean and modern aesthetic. Colors should be combined thoughtfully to maintain readability and visual hierarchy, with 'primary' reserved for calls to action and emphasis, and 'secondary' and 'background' providing structural balance.",
+          "paletteAccessibilityNotes": "The combination of 'primary' (#D94A1B) on 'primaryForeground' (#FFFFFF) meets WCAG AA standards for text and interactive elements, ensuring sufficient contrast. The 'secondary' (#000000) background with 'secondaryForeground' (#FFFFFF) text provides excellent contrast exceeding WCAG AAA standards. The 'background' (#FFFFFF) with 'textPrimary' (#000000) also meets WCAG AAA contrast requirements for body text. This palette supports accessibility best practices across light and dark sections, ensuring legibility and user comfort."
+        },
+        "typography": {
+          "headings": {
+            "font": {
+              "role": "Primary Heading Font",
+              "fontFamily": "space grotesk",
+              "fontJustification": ""
+            },
+            "headingsSimilarFonts": [
+              "roboto",
+              "space grotesk",
+              "quicksand"
+            ],
+            "headingsUsageGuide": "Use the 'azeret-mono' font for all headings to maintain a consistent technical and modern tone. Headings should be left-aligned with ample spacing above and below to create clear separation from body text. Pair headings with paragraph text of the same or complementary monospace fonts to preserve visual harmony. Use the 'primary' color for headings on light backgrounds and 'secondaryForeground' on dark backgrounds to ensure readability and emphasis. Avoid overly large font sizes that disrupt the minimalist layout; maintain a balanced hierarchy with clear differentiation from body text.",
+            "headingsAccessibilityNotes": "Headings in 'azeret-mono' combined with 'primary' or 'secondaryForeground' colors meet WCAG AA contrast standards, ensuring clear readability and accessibility for users with visual impairments."
+          },
+          "paragraphs": {
+            "font": {
+              "role": "Main Body Text Font",
+              "fontFamily": "azeret-mono",
+              "fontJustification": ""
+            },
+            "paragraphsSimilarFonts": [
+              "roboto",
+              "space grotesk",
+              "quicksand"
+            ],
+            "paragraphsUsageGuide": "Use the 'azeret-mono' font for body text to maintain consistency with headings and reinforce the technical brand identity. Text should be left-aligned with sufficient line height and letter spacing to enhance readability. On light backgrounds, use 'textPrimary' color, and on dark backgrounds, use 'textSecondary'. Maintain a clear visual hierarchy by using smaller font sizes than headings and avoiding dense blocks of text. Incorporate code-like syntax styling for calls to action or special text elements using the 'primary' color to emphasize interactivity.",
+            "paragraphsAccessibilityNotes": "Body text in 'azeret-mono' with 'textPrimary' on 'background' or 'textSecondary' on 'darkBackground' meets WCAG AA contrast requirements, supporting accessibility and user comfort."
+          },
+          "welcomeSectionTypography": {
+            "placement": "Weighted Quadrant",
+            "implementation": "The welcome section uses a weighted quadrant layout where the left half is dedicated to textual content aligned left, and the right half features a large visual or graphic element. Typography is placed in the lower-left quadrant, creating a balanced and focused entry point. The text uses monospace font with clear hierarchy, and the call-to-action is styled with code-like brackets in the 'primary' color, reinforcing the tech theme. This placement ensures immediate user focus on the message while maintaining visual interest with the adjacent graphic."
+          },
+          "fontSizes": [
+            {
+              "name": "xs",
+              "size": "0.75rem",
+              "lineHeight": "1.2",
+              "letterSpacing": "0.05em",
+              "fontWeight": "400"
+            },
+            {
+              "name": "sm",
+              "size": "0.875rem",
+              "lineHeight": "1.3",
+              "letterSpacing": "0.04em",
+              "fontWeight": "400"
+            },
+            {
+              "name": "base",
+              "size": "1rem",
+              "lineHeight": "1.5",
+              "letterSpacing": "0.03em",
+              "fontWeight": "400"
+            },
+            {
+              "name": "lg",
+              "size": "1.125rem",
+              "lineHeight": "1.5",
+              "letterSpacing": "0.02em",
+              "fontWeight": "500"
+            },
+            {
+              "name": "xl",
+              "size": "1.25rem",
+              "lineHeight": "1.6",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            },
+            {
+              "name": "2xl",
+              "size": "1.5rem",
+              "lineHeight": "1.6",
+              "letterSpacing": "0em",
+              "fontWeight": "600"
+            },
+            {
+              "name": "3xl",
+              "size": "1.875rem",
+              "lineHeight": "1.4",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "700"
+            },
+            {
+              "name": "4xl",
+              "size": "2.25rem",
+              "lineHeight": "1.3",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            },
+            {
+              "name": "5xl",
+              "size": "3rem",
+              "lineHeight": "1.2",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "800"
+            },
+            {
+              "name": "6xl",
+              "size": "3.75rem",
+              "lineHeight": "1.1",
+              "letterSpacing": "-0.04em",
+              "fontWeight": "800"
+            },
+            {
+              "name": "7xl",
+              "size": "4.5rem",
+              "lineHeight": "1.1",
+              "letterSpacing": "-0.05em",
+              "fontWeight": "900"
+            },
+            {
+              "name": "8xl",
+              "size": "6rem",
+              "lineHeight": "1",
+              "letterSpacing": "-0.06em",
+              "fontWeight": "900"
+            },
+            {
+              "name": "9xl",
+              "size": "8rem",
+              "lineHeight": "1",
+              "letterSpacing": "-0.07em",
+              "fontWeight": "900"
+            }
+          ]
+        },
+        "layout": {
+          "layoutDna": {
+            "densitySpectrum": "Balanced",
+            "contrastSpectrum": "High-Contrast",
+            "gridAlignmentSpectrum": "Strict Grid",
+            "negativeSpaceUsage": "Generous",
+            "textVsImageEmphasis": "Balanced",
+            "complexitySpectrum": "Simple & Clean"
+          },
+          "grid": {
+            "compositionApproach": "Modular",
+            "spacing": {
+              "columns": "12-column grid",
+              "rows": "Defined content rows",
+              "gaps": "Consistent medium gaps"
+            },
+            "margins": "Generous page margins",
+            "padding": "Consistent padding within containers"
+          }
+        },
+        "components": {
+          "containers": "Containers are defined with clear boundaries and consistent padding, using either white or black backgrounds to create distinct sections. They maintain a minimalist style with no excessive decoration, relying on color contrast and spacing to separate content areas. The 'darkBackground' container style is used for service sections, while 'background' containers are used for introductory and informational content.",
+          "images": "Images and graphics are treated as focal points within their containers, often occupying half or full container width. Wireframe 3D shapes are used as illustrative elements, rendered in white lines on black backgrounds to maintain the tech aesthetic. Images are clean, with no borders or shadows, emphasizing clarity and modernity.",
+          "buttons": "Buttons are styled minimally, often as text links or outlined boxes in the 'primary' color. They use monospace font with code-like syntax (curly braces and arrows) to reinforce the brand's technical identity. Buttons have no heavy backgrounds or gradients, maintaining the minimalist and high-contrast design."
+        },
+        "graphicElements": {
+          "icons": "Icons are minimal and line-based, consistent with the wireframe style. They use the 'primary' color for emphasis and are simple in form to maintain clarity and modernity.",
+          "illustrations": "Illustrations consist primarily of 3D wireframe geometric shapes rendered in white on black backgrounds. These shapes convey complexity and innovation without overwhelming the design, supporting the futuristic and technical brand personality.",
+          "stickers": "No stickers or badge-style elements are present, maintaining the clean and minimal aesthetic."
+        }
+      },
+      "originImagesUrls": [
+        "https://wixmp-fe53c9ff592a4da924211f23.wixmp.com/uploads/1750170708963-Screenshot%202025-06-05%20at%2015.50.53.png"
+      ]
+    }
+  ],
+  "brandBook": {
+    "tones": [
+      "Informative",
+      "Empathetic",
+      "Action-oriented"
+    ],
+    "designStyle": {
+      "primaryStyle": [
+        "Techy",
+        "Modern",
+        "Minimalist"
+      ],
+      "supportingStyles": [
+        "Futuristic",
+        "Emergency Response"
+      ]
+    },
+    "toneOfVoice": "Authoritative, urgent, and compassionate.",
+    "components": {
+      "images": "Layout Role: Full-bleed background with a fixed position to create a window effect on scroll. | Gallery Type: Horizontal Scroll Filmstrip: A single-row gallery driven by horizontal scroll, where oversized items create a 'peek-a-boo' effect.",
+      "buttons": "Primary: background-color: #FF4500, color: #FFFFFF, border-radius: 8px, padding: 12px 24px. Secondary: background-color: transparent, color: #FF4500, border: 1px solid #FF4500, border-radius: 8px.",
+      "containers": "Method: Glassmorphism, Style: background-color: rgba(255, 255, 255, 0.05), border: 1px solid rgba(255, 255, 255, 0.1), border-radius: 16px, backdrop-filter: blur(10px)"
+    },
+    "typography": {
+      "headings": {
+        "font": {
+          "role": "Headings",
+          "fontFamily": "space grotesk",
+          "fontJustification": ""
+        },
+        "headingsUsageGuide": "Use Space Grotesk for all headings to maintain a modern and techy feel. Adjust font weight and size to create a clear visual hierarchy.",
+        "headingsSimilarFonts": [],
+        "headingsAccessibilityNotes": "Ensure headings are properly nested (H1, H2, H3, etc.) for semantic structure and screen reader accessibility."
+      },
+      "fontSizes": [
+        {
+          "name": "xs",
+          "size": "0.75rem",
+          "letterSpacing": "0.05em",
+          "lineHeight": "1",
+          "fontWeight": "400"
+        },
+        {
+          "name": "sm",
+          "size": "0.875rem",
+          "letterSpacing": "0.025em",
+          "lineHeight": "1.25",
+          "fontWeight": "400"
+        },
+        {
+          "name": "base",
+          "size": "1rem",
+          "letterSpacing": "0em",
+          "lineHeight": "1.5",
+          "fontWeight": "400"
+        },
+        {
+          "name": "lg",
+          "size": "1.125rem",
+          "letterSpacing": "-0.01em",
+          "lineHeight": "1.75",
+          "fontWeight": "400"
+        },
+        {
+          "name": "xl",
+          "size": "1.25rem",
+          "letterSpacing": "-0.015em",
+          "lineHeight": "1.75",
+          "fontWeight": "500"
+        },
+        {
+          "name": "2xl",
+          "size": "1.5rem",
+          "letterSpacing": "-0.02em",
+          "lineHeight": "2",
+          "fontWeight": "500"
+        },
+        {
+          "name": "3xl",
+          "size": "1.875rem",
+          "letterSpacing": "-0.025em",
+          "lineHeight": "2.25",
+          "fontWeight": "600"
+        },
+        {
+          "name": "4xl",
+          "size": "2.25rem",
+          "letterSpacing": "-0.03em",
+          "lineHeight": "2.5",
+          "fontWeight": "700"
+        },
+        {
+          "name": "5xl",
+          "size": "3rem",
+          "letterSpacing": "-0.035em",
+          "lineHeight": "1",
+          "fontWeight": "700"
+        },
+        {
+          "name": "6xl",
+          "size": "3.75rem",
+          "letterSpacing": "-0.04em",
+          "lineHeight": "1",
+          "fontWeight": "700"
+        },
+        {
+          "name": "7xl",
+          "size": "4.5rem",
+          "letterSpacing": "-0.045em",
+          "lineHeight": "1",
+          "fontWeight": "800"
+        },
+        {
+          "name": "8xl",
+          "size": "6rem",
+          "letterSpacing": "-0.05em",
+          "lineHeight": "1",
+          "fontWeight": "800"
+        },
+        {
+          "name": "9xl",
+          "size": "8rem",
+          "letterSpacing": "-0.05em",
+          "lineHeight": "1",
+          "fontWeight": "900"
+        }
+      ],
+      "paragraphs": {
+        "font": {
+          "role": "Paragraphs",
+          "fontFamily": "roboto",
+          "fontJustification": ""
+        },
+        "paragraphsUsageGuide": "Use Roboto for body text to ensure readability and a clean, modern aesthetic.",
+        "paragraphsSimilarFonts": [],
+        "paragraphsAccessibilityNotes": "Ensure sufficient line height and letter spacing for readability. Avoid using very small font sizes."
+      },
+      "welcomeSectionTypography": {
+        "placement": "",
+        "implementation": ""
+      }
+    },
+    "originImagesUrls": [],
+    "layout": {
+      "grid": {
+        "margins": "Base unit: 8px. All margins are multiples of 8px.",
+        "padding": "Base unit: 8px. All padding is multiples of 8px.",
+        "spacing": {
+          "gaps": "Base unit: 8px. All grid gaps are multiples of 8px (e.g., 16px, 24px, 32px).",
+          "rows": "Auto",
+          "columns": "12"
+        },
+        "compositionApproach": "Asymmetrical Grid with Glassmorphism Accents"
+      },
+      "layoutDna": {
+        "contrastSpectrum": "High",
+        "densitySpectrum": "Moderate",
+        "textVsImageEmphasis": "Balanced",
+        "complexitySpectrum": "Moderate",
+        "gridAlignmentSpectrum": "Intentionally Broken",
+        "negativeSpaceUsage": "Balanced"
+      },
+      "heroSectionLayout": "**Emergency Alert Intro**\nComposition (Tailwind Spec): Full-screen container (h-screen grid place-items-center). Headline 'Disaster Rescue & Response Center' with each word wrapped in a `span`. A smaller sub-headline 'We're here to help' is placed below the main headline.\nSignature Hook (Framer Motion Spec): Parent `motion.h1` uses `variants` with `transition: { staggerChildren: 0.06 }`. Each `motion.span` has a variant with `initial={{ opacity: 0, y: -50 }}` and `animate={{ opacity: 1, y: 0 }}`. An emergency alert icon (e.g., a flashing siren) is placed to the left of the headline and uses a `whileHover={{ scale: 1.1 }}` effect."
+    },
+    "graphicElements": {
+      "icons": "",
+      "stickers": "",
+      "illustrations": ""
+    },
+    "designSummary": "**Emergency Response UI: A Fusion of Techy Aesthetics and Critical Information**\n\nVisual Vision: The design aims to create a sense of urgency and reliability through a high-tech interface. It combines a dark, modern aesthetic with clear, easily accessible information. The layout is dynamic and engaging, guiding users through critical resources with intuitive interactions.\n\nExecution Blueprint:\n1. Dark Mode Foundation: The base color scheme is a dark charcoal (#121212) to reduce eye strain and create a sense of seriousness. Accent colors are bright red-orange (#FF4500) for alerts and key interactive elements.\n2. Asymmetrical Grid: A modified 12-column grid provides structure, but elements intentionally break the grid to create visual interest and highlight important information.\n3. Glassmorphism Accents: Subtle glassmorphism effects are used on containers and buttons to add depth and a futuristic feel without sacrificing readability.\n4. Dynamic Data Visualization: Real-time data (disaster tickers, safe zone maps) is presented with smooth animations and clear visual cues to enhance user understanding.\n5. Monospaced Details: Use Azeret Mono for supplementary information like timestamps, coordinates, and data points to reinforce the techy aesthetic.",
+    "palette": {
+      "colors": {
+        "background": "#121212",
+        "secondary": "#007BFF",
+        "customColors": [
+          {
+            "name": "alertRed",
+            "value": "#FF0000"
+          },
+          {
+            "name": "safeGreen",
+            "value": "#00FF00"
+          },
+          {
+            "name": "darkGrey",
+            "value": "#333333"
+          },
+          {
+            "name": "destructive",
+            "value": "#DC2626"
+          },
+          {
+            "name": "destructive-foreground",
+            "value": "#FFFFFF"
+          }
+        ],
+        "foreground": "#FFFFFF",
+        "secondaryForeground": "#FFFFFF",
+        "primaryForeground": "#FFFFFF",
+        "primary": "#FF4500"
+      },
+      "paletteUsageGuide": "Use primary color (#FF4500) sparingly for key interactive elements and alerts. Use secondary color (#007BFF) for less critical interactive elements. Dark grey (#333333) can be used for secondary text or backgrounds.",
+      "paletteAccessibilityNotes": "Ensure sufficient contrast between text and background colors (WCAG AA compliance). Use colorblindness simulators to verify accessibility."
+    }
+  },
+  "initialPrompt": "Create a fully responsive, modern, visually powerful website named “Disaster Rescue & Response Center (DRRC)”. Use a professional emergency-response theme, strong typography, red–orange emergency accents, smooth animations, and clean UI. Provide a unique, futuristic design combining disaster awareness, rescue coordination, and emergency tools. Include the following pages with unique layouts: Home (Hero section with emergency alert animation, Quick SOS button, Real-time disaster ticker, Mission statement, Quick links to “Emergency Guide”, “Safe Zone Map”, “Donation”, “Volunteer Registration”), Types of Disasters (Grid + icon-based layout, Natural disasters, Man-made disasters, Each card: image, risks, do’s & don’ts), Emergency Guide (Step-by-step instructions, Pre-disaster, During, After, Downloadable PDF, Accordion UI), Rescue Teams Info (Team profiles, Roles & responsibilities, Contact & deployment areas, Animated team badges), Safe Zone Map (Interactive mock map, Safe zones, shelters, hospitals, Icons & color codes, Hover-based tooltips), SOS Instruction Page (How to send SOS, Offline SOS steps, Emergency signal guide, Large icons), Donation Page (Clean donation UI, Monthly & one-time donation cards, QR + payment gateway placeholder, Impact statistics), Volunteer Registration (Modern form UI, Skills, availability, past experience, Upload ID, Success confirmation), Emergency Contacts (Global & local emergency numbers, One-tap call buttons, Categorized), Awareness Articles (Blog layout, Card-based article list, Search + filter, Article reading page), Gallery (Disaster awareness gallery, Rescue operations, volunteer activities, Masonry layout + lightbox preview), About Organization (Story timeline, Mission, vision, Leadership team, Achievements with icon animation), Login / Register (Clean UI, Email, password, OTP option, Forgot password page), Volunteer Dashboard (Profile, tasks, mission updates, Upcoming events, Certificates section, Alert notifications UI mock). Design Requirements: Full responsive, Smooth micro-interactions, Emergency color palette (red, orange, dark grey), Unique icons and illustrations, Minimal glass-morphism sections, High-quality UX, Professional NGO/rescue branding. The site should be easy to upload to GitHub and Netlify, and run locally without issues, with up-to-date dependencies.",
+  "status": "READY",
+  "revision": "11",
+  "createdDate": "2025-12-08T15:39:59.844Z",
+  "updatedDate": "2025-12-08T15:40:36.851Z",
+  "attachments": {
+    "contentImagesUrls": [],
+    "inspirationImagesUrls": []
+  },
+  "selectedBrandingPresetId": "00000000-181c-4ba8-bd39-28a681d7b3cf",
+  "plan": "{\n  \"sections\": [\n    {\n      \"id\": \"overview\",\n      \"title\": \"## Overview\",\n      \"content\": \"This plan outlines a modern, visually powerful website for the Disaster Rescue & Response Center (DRRC). It will serve as a central hub for disaster awareness, rescue coordination, and emergency tools, utilizing Wix CMS to manage all content and features.\"\n    },\n    {\n      \"id\": \"key-features\",\n      \"title\": \"## Key features\",\n      \"content\": \"- **View Homepage Content**: Displays brand information, emergency alerts, mission statement, and quick links.\\n- **View Disaster Types Listing**: Shows a grid of different disaster types with icons.\\n- **View Disaster Type Details**: Provides detailed information on risks, do's, and don'ts for each disaster type.\\n- **View Emergency Guide Listing**: Presents a list of step-by-step emergency instructions.\\n- **View Emergency Guide Details**: Offers detailed pre-disaster, during, and after guidance, including downloadable PDFs.\\n- **View Rescue Team Listing**: Displays profiles of rescue teams.\\n- **View Rescue Team Details**: Shows roles, responsibilities, contact information, and deployment areas for each team.\\n- **View Safe Zone Map**: Displays an interactive map with safe zones, shelters, and hospitals, featuring tooltips.\\n- **View SOS Instruction Page**: Provides instructions on how to send SOS messages and emergency signals.\\n- **View Donation Page**: Features a clean UI for monthly and one-time donations, including payment gateway placeholders and impact statistics.\\n- **Submit Volunteer Registration**: Allows users to register as volunteers by providing skills, availability, past experience, and uploading ID.\\n- **View Emergency Contacts Listing**: Lists global and local emergency numbers, categorized for easy access.\\n- **View Awareness Articles Listing**: Displays a list of articles related to disaster awareness.\\n- **View Awareness Article Details**: Shows the full content of a selected article.\\n- **View Gallery Listing**: Presents a masonry layout of images from disaster awareness, rescue operations, and volunteer activities.\\n- **View Gallery Item Details**: Allows previewing gallery images in a lightbox.\\n- **View About Organization Content**: Details the organization's story timeline, mission, vision, leadership, and achievements.\\n- **User Login/Register**: Enables users to log in or register using email, password, and OTP, with a forgot password option.\\n- **View Volunteer Dashboard**: Provides volunteers with access to their profile, tasks, mission updates, upcoming events, certificates, and alert notifications.\",\n      \"metadata\": [\n        { \"id\": \"view-homepage-content\", \"name\": \"View Homepage Content\" },\n        { \"id\": \"view-disaster-types-listing\", \"name\": \"View Disaster Types Listing\" },\n        { \"id\": \"view-disaster-type-details\", \"name\": \"View Disaster Type Details\" },\n        { \"id\": \"view-emergency-guide-listing\", \"name\": \"View Emergency Guide Listing\" },\n        { \"id\": \"view-emergency-guide-details\", \"name\": \"View Emergency Guide Details\" },\n        { \"id\": \"view-rescue-team-listing\", \"name\": \"View Rescue Team Listing\" },\n        { \"id\": \"view-rescue-team-details\", \"name\": \"View Rescue Team Details\" },\n        { \"id\": \"view-safe-zone-map\", \"name\": \"View Safe Zone Map\" },\n        { \"id\": \"view-sos-instruction-page\", \"name\": \"View SOS Instruction Page\" },\n        { \"id\": \"view-donation-page\", \"name\": \"View Donation Page\" },\n        { \"id\": \"submit-volunteer-registration\", \"name\": \"Submit Volunteer Registration\" },\n        { \"id\": \"view-emergency-contacts-listing\", \"name\": \"View Emergency Contacts Listing\" },\n        { \"id\": \"view-awareness-articles-listing\", \"name\": \"View Awareness Articles Listing\" },\n        { \"id\": \"view-awareness-article-details\", \"name\": \"View Awareness Article Details\" },\n        { \"id\": \"view-gallery-listing\", \"name\": \"View Gallery Listing\" },\n        { \"id\": \"view-gallery-item-details\", \"name\": \"View Gallery Item Details\" },\n        { \"id\": \"view-about-organization-content\", \"name\": \"View About Organization Content\" },\n        { \"id\": \"user-login-register\", \"name\": \"User Login/Register\" },\n        { \"id\": \"view-volunteer-dashboard\", \"name\": \"View Volunteer Dashboard\" }\n      ]\n    },\n    {\n      \"id\": \"structure\",\n      \"title\": \"## Structure\",\n      \"content\": \"- **Header (Reusable)**: Contains the DRRC logo, navigation links (Home, Types of Disasters, Emergency Guide, Rescue Teams, Safe Zone Map, SOS, Donation, Volunteer, Contacts, Awareness, Gallery, About), and Login/Register button.\\n- **Footer (Reusable)**: Contains copyright information, social media links, and quick links.\\n- **Homepage**: Features the hero section with alert animation, SOS button, disaster ticker, mission statement, and quick links.\\n- **Types of Disasters Page**: Displays the grid layout of disaster types.\\n- **Emergency Guide Page**: Hosts the step-by-step instructions and downloadable PDF.\\n- **Rescue Teams Info Page**: Shows team profiles, roles, and contact details.\\n- **Safe Zone Map Page**: Displays the interactive map with safe zones, shelters, and hospitals.\\n- **SOS Instruction Page**: Provides guidance on sending SOS messages and emergency signals.\\n- **Donation Page**: Features the donation UI, payment gateway placeholder, and impact statistics.\\n- **Volunteer Registration Page**: Contains the modern form for volunteer sign-ups.\\n- **Emergency Contacts Page**: Lists global and local emergency numbers.\\n- **Awareness Articles Page**: Displays the blog layout with article cards and search/filter functionality.\\n- **Gallery Page**: Hosts the masonry layout of disaster and rescue images.\\n- **About Organization Page**: Presents the organization's story, mission, vision, leadership, and achievements.\\n- **Login/Register Page**: Provides the UI for user authentication.\\n- **Volunteer Dashboard Page**: Displays the personalized dashboard for registered volunteers.\"\n    }\n  ],\n  \"apps\": [\n    {\n      \"id\": \"wix-cms\",\n      \"keyFeatures\": [\n        { \"id\": \"view-homepage-content\", \"name\": \"View Homepage Content\" },\n        { \"id\": \"view-disaster-types-listing\", \"name\": \"View Disaster Types Listing\" },\n        { \"id\": \"view-disaster-type-details\", \"name\": \"View Disaster Type Details\" },\n        { \"id\": \"view-emergency-guide-listing\", \"name\": \"View Emergency Guide Listing\" },\n        { \"id\": \"view-emergency-guide-details\", \"name\": \"View Emergency Guide Details\" },\n        { \"id\": \"view-rescue-team-listing\", \"name\": \"View Rescue Team Listing\" },\n        { \"id\": \"view-rescue-team-details\", \"name\": \"View Rescue Team Details\" },\n        { \"id\": \"view-safe-zone-map\", \"name\": \"View Safe Zone Map\" },\n        { \"id\": \"view-sos-instruction-page\", \"name\": \"View SOS Instruction Page\" },\n        { \"id\": \"view-donation-page\", \"name\": \"View Donation Page\" },\n        { \"id\": \"submit-volunteer-registration\", \"name\": \"Submit Volunteer Registration\" },\n        { \"id\": \"view-emergency-contacts-listing\", \"name\": \"View Emergency Contacts Listing\" },\n        { \"id\": \"view-awareness-articles-listing\", \"name\": \"View Awareness Articles Listing\" },\n        { \"id\": \"view-awareness-article-details\", \"name\": \"View Awareness Article Details\" },\n        { \"id\": \"view-gallery-listing\", \"name\": \"View Gallery Listing\" },\n        { \"id\": \"view-gallery-item-details\", \"name\": \"View Gallery Item Details\" },\n        { \"id\": \"view-about-organization-content\", \"name\": \"View About Organization Content\" },\n        { \"id\": \"user-login-register\", \"name\": \"User Login/Register\" },\n        { \"id\": \"view-volunteer-dashboard\", \"name\": \"View Volunteer Dashboard\" }\n      ]\n    }\n  ],\n  \"version\": \"3.0\"\n}",
+  "designerData": {
+    "designerId": "59076a1d-61da-4711-8035-592d26c5d5fe",
+    "designerName": "Linus",
+    "selectionMethod": "UNSELECTED"
+  }
+}
